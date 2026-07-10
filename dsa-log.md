@@ -14,3 +14,8 @@
 - Pattern: Hash map / one-pass
 - Mistake: First attempt was O(n²) brute force — saw optimal O(n) solution
 - Status: ✅ passed (2:53) → re-coded optimal version clean
+
+### 49 - Group Anagrams
+- Pattern: Hash map with character frequency counter (tuple as key)
+- Mistake: Tried sorted() on string (can't use list as dict key) — saw solution, learned tuple + frequency counter
+- Status: ⚠️ needed solution (16+ min) → re-coded clean after

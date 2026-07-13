@@ -25,6 +25,11 @@
 - Mistake: Didn't know dict.items() unpacking or lambda sort-key syntax — researched and re-coded from scratch
 - Status: ⚠️ needed solution (25+ min research) → re-coded clean, redo 07/13
 
+## 238 - Product of Array Except Self
+- Pattern: prefix/postfix products (two-pass O(n))
+- Mistake: brute-forced O(n²) nested loop → TLE; first attempt compared by value not index; didn't know the prefix trick
+- Status: ⚠️ needed solution → re-coded clean from blank → REDO LIST
+
 ## Week 1 - SQL
 
 ### 182 - Duplicate Emails
@@ -38,6 +43,12 @@
 - Status: ✅ passed clean (2:00)
 
 
+## Week 2 - DSA
+## 125 - Valid Palindrome
+  - Pattern: two pointers (solved via string reversal instead)
+  - Mistake: first attempt used nested loops comparing each char against all others — misunderstood palindrome structure (each position pairs with ONE mirror position). Fixed with reversal trick; haven't written the true two-pointer version yet
+  - Status: solved ✅ → REDO LIST (re-solve with left/right pointers, O(1) space)
+  
 ## Redo List
 - 217 Contains Duplicate - attempt 07/09 - ✅
 - 49 Group Anagrams — attempt 07/12

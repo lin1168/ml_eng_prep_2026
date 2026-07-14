@@ -44,12 +44,17 @@
 
 
 ## Week 2 - DSA
-## 125 - Valid Palindrome
+### 125 - Valid Palindrome
   - Pattern: two pointers (solved via string reversal instead)
   - Mistake: first attempt used nested loops comparing each char against all others — misunderstood palindrome structure (each position pairs with ONE mirror position). Fixed with reversal trick; haven't written the true two-pointer version yet
   - Status: solved ✅ → REDO LIST (re-solve with left/right pointers, O(1) space)
   
+## 167 - Two Sum II
+  - Pattern: two pointers on sorted array (move based on sum vs target)
+  - Mistake: first attempt was O(n²) brute force — ignored the sorted property entirely; then wrote `r-1` instead of `r-=1` (no-op expression) and typo'd variable name
+  - Status: solved after hints → REDO LIST
+
 ## Redo List
 - 217 Contains Duplicate - attempt 07/09 - ✅
-- 49 Group Anagrams — attempt 07/12
-- 347 Top K Frequent Elements — attempt 07/13
+- 49 Group Anagrams — attempt 07/12  ✅
+- 347 Top K Frequent Elements — attempt 07/13 ✅

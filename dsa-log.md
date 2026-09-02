@@ -49,12 +49,32 @@
   - Mistake: first attempt used nested loops comparing each char against all others — misunderstood palindrome structure (each position pairs with ONE mirror position). Fixed with reversal trick; haven't written the true two-pointer version yet
   - Status: solved ✅ → REDO LIST (re-solve with left/right pointers, O(1) space)
   
-## 167 - Two Sum II
+### 167 - Two Sum II
   - Pattern: two pointers on sorted array (move based on sum vs target)
   - Mistake: first attempt was O(n²) brute force — ignored the sorted property entirely; then wrote `r-1` instead of `r-=1` (no-op expression) and typo'd variable name
-  - Status: solved after hints → REDO LIST
+  - Status: solved after hints → REDO LIST\
+
+### 15 - 3Sum
+  - Pattern: sort + fixed anchor + Two Sum II inner loop + duplicate skipping
+  - Mistake: inverted the structure — fixed outer pointers and scanned middle (no valid move rule, O(n³)); also appended from unsorted array + full-width char typo
+  - Status: needed solution (expected for this one) → recode from blank now → REDO LIST
+
+### 121 - Best Time to Buy and Sell Stock
+  - Pattern: one pass, track min-so-far (wrote it as two pointers — same thing)
+  - Mistake: first attempt moved l past the new low (l+=1 instead of l=r) — missed better buy points; loop termination relied on branch luck until bound moved into while condition
+  - Status: solved after hint ✅ → REDO LIST (write the min-tracking version from memory)
+
+### 11 - Container With Most Water
+  - Pattern: two pointers converging from both ends (l=0, r=n-1), move the shorter wall
+  - Mistake: first attempt inverted the structure — started l,r=0,1 (left-anchored) and fused pointer movement to res (moved l only when area beat max), then leaped l=r skipping the pillars that held the answer. Same recurring inverted-structure pattern as 121/15. Brute-force O(n²) version worked but TLE'd
+  - Move rule insight: width only shrinks inward, so the only way to beat current area is a taller cap → shorter wall IS the cap → discard it. Decided ONLY by wall height, never by res. Tie = either wall safe
+  - Status: solved after hint ✅ (recoded clean from blank, flipped branches to r-=1 on my own) → REDO LIST (write min... i.e. two-pointer version from memory)
 
 ## Redo List
 - 217 Contains Duplicate - attempt 07/09 - ✅
 - 49 Group Anagrams — attempt 07/12  ✅
 - 347 Top K Frequent Elements — attempt 07/13 ✅
+- Valid Palindrome
+- Two Sum II
+- 3Sum
+- Best Time to Buy and Sell Stock

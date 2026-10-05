@@ -19,4 +19,3 @@ Source: UCI ML Repository, dataset 179. Loaded 2026-09-02 via `src/load.py`.
   rare class is positive.
 - 104 positives against 590 features. Feature selection is the project.
 - Accuracy is a dead metric here: predicting all-pass scores 93.36%.
-'@ | Set-Content -Encoding utf8 reports\data_card.md
